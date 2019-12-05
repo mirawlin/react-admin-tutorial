@@ -1,9 +1,13 @@
 import React from 'react';
-import { List, Datagrid, TextField, ReferenceField, EditButton, Edit, SimpleForm, 
-    TextInput, ReferenceInput, SelectInput, Create, Filter } from 'react-admin';
+import {
+    List, Datagrid, TextField, ReferenceField, EditButton, Edit, SimpleForm,
+    TextInput, ReferenceInput, SelectInput, Create, Filter
+} from 'react-admin';
+
+const Title = <span> OP Posts </span>
 
 export const PostList = props => (
-    <List filters={<PostFilter />} {...props}>
+    <List title={Title} filters={<PostFilter />} {...props}>
         <Datagrid>
             <TextField source="id" />
             <ReferenceField source="userId" reference="users">
